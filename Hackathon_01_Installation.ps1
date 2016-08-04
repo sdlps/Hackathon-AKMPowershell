@@ -244,16 +244,20 @@ issuerwstrustbindingtype=""
 &C:\Tools\__InstallTool\InstallTool.exe
 
 ######################################################
-#	9. Prepare SDL hack for ADFS on Hosted server
+#	9. Upgrade Database for 11 to 12
+Database-Upgrade
+
+######################################################
+#	10. Prepare SDL hack for ADFS on Hosted server
 Access-ADFS-For-Support 
 
 ######################################################
-#	10. Start Trisoft* services and change them "Automatic"
+#	11. Start Trisoft* services and change them "Automatic"
 Start-Service -Name "Trisoft*"
 Set-Service -Name "Trisoft*" -StartupType Automatic
 
 ######################################################
-#	11. Test Installation
+#	12. Test Installation
 #		a. Publishing
 #		b. Export
 #		c. Log-on or Test connection
